@@ -8,7 +8,7 @@ pipeline {
             sh 'pwd '
             sh 'cp /home/ec2-user/manideep-aws/pradeep.pem /root/.jenkins/workspace/build_buckets_aws/pradeep.pem '
                 sh 'ls /root/.jenkins/workspace/build_buckets_aws/ -al'               
-            archiveArtifacts artifacts: '/root/.jenkins/workspace/build_buckets_aws/pradeep.pem'
+            archiveArtifacts artifacts: 'pradeep.pem'
             }
         }
         stage('Test'){
