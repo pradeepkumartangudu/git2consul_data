@@ -6,8 +6,8 @@ pipeline {
             sh 'ls /home/ec2-user/manideep-aws -al'
             sh 'cat /home/ec2-user/main.txt '
             sh 'pwd '
-            sh 'zip –r /home/ec2-user/myfile.zip /home/ec2-user/manideep-aws '
-            archiveArtifacts artifacts: '/root/.jenkins/workspace/build_buckets_aws'
+            sh 'cp /home/ec2-user/manideep-aws/pradeep.pem /root/.jenkins/workspace/build_buckets_aws '
+            archiveArtifacts artifacts: '/root/.jenkins/workspace/build_buckets_aws/pradeep.pem'
             }
         }
         stage('Test'){
