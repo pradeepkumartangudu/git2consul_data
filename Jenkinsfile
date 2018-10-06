@@ -9,8 +9,8 @@ pipeline {
             sh 'cp /home/ec2-user/manideep-aws/pradeep.pem /root/.jenkins/workspace/build_buckets_aws/pradeep.pem '
                 sh 'ls /root/.jenkins/workspace/build_buckets_aws/ -al'
                 sh 'cp -r /home/ec2-user/manideep-aws/ /root/.jenkins/workspace/build_buckets_aws/manideep-aws '
-                sh 'git add -all'
-                sh 'git commit -m ss'
+                sh 'git add --all'
+                sh 'git commit -m "ss"'
                 sh 'git push origin master'
             archiveArtifacts artifacts: 'pradeep.pem'
             }
